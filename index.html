@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>田中行政書士事務所 | 建設業許可・会社設立・相続手続きのプロ</title>
+    <meta name="description" content="建設業許可、会社設立、相続手続きなど、行政手続きのことなら田中行政書士事務所にお任せください。迅速・丁寧・確実にサポートいたします。">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f2f5" width="1200" height="600"/><path fill="%23e1e8ed" d="M0 400l50-16.7C100 367 200 333 300 316.7C400 300 500 300 600 316.7C700 333 800 367 900 383.3C1000 400 1100 400 1150 400L1200 400V600H0V400Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0 100px;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ffd700;
+            border-radius: 2px;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #2a5298;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+        }
+
+        /* Features */
+        .features {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            height: 400px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* Pricing */
+        .pricing {
+            background: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: #2a5298;
+            box-shadow: 0 10px 30px rgba(42, 82, 152, 0.1);
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin: 1rem 0;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #ffd700;
+            font-family: serif;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            gap: 1rem;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            background: #2a5298;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Blog */
+        .blog {
+            background: white;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #1e3c72;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2a5298;
+        }
+
+        .submit-btn {
+            background: #2a5298;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #1e3c72;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #2a5298;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #2a5298;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1e3c72;
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav li {
+                padding: 0.5rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Page Sections (initially hidden) */
+        .page-section {
+            display: none;
+            min-height: calc(100vh - 160px);
+            padding-top: 100px;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        #home.active {
+            display: block;
+        }
+
+        /* Blog Admin Styles */
+        .admin-panel {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .admin-form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .admin-form input,
+        .admin-form textarea {
+            padding: 0.75rem;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #2a5298;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1e3c72;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .blog-list {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .blog-item {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e1e8ed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .blog-item:last-child {
+            border-bottom: none;
+        }
+
+        .blog-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-sm {
+            padding: 0.375rem 0.75rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">田中行政書士事務所</div>
+                <nav>
+                    <ul id="nav-menu">
+                        <li><a href="#" onclick="showPage('home')">ホーム</a></li>
+                        <li><a href="#" onclick="showPage('services')">サービス</a></li>
+                        <li><a href="#" onclick="showPage('about')">事務所案内</a></li>
+                        <li><a href="#" onclick="showPage('pricing')">料金表</a></li>
+                        <li><a href="#" onclick="showPage('testimonials')">お客様の声</a></li>
+                        <li><a href="#" onclick="showPage('blog')">ブログ</a></li>
+                        <li><a href="#" onclick="showPage('contact')">お問い合わせ</a></li>
+                    </ul>
+                    <button class="mobile-menu-btn" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page-section active">
+        <section class="hero">
+            <div class="container">
+                <h1>信頼と実績の行政書士事務所</h1>
+                <p>建設業許可・会社設立・相続手続きなど、あらゆる行政手続きをプロフェッショナルがサポート</p>
+                <a href="#" onclick="showPage('contact')" class="cta-button">無料相談のご予約</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">選ばれる理由</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>迅速対応</h3>
+                        <p>お急ぎの案件にも柔軟に対応。最短当日での書類作成も可能です。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>確実な手続き</h3>
+                        <p>豊富な経験と専門知識で、ミスのない確実な手続きを保証します。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>丁寧なサポート</h3>
+                        <p>お客様の立場に立った親身なサポートを心がけています。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-yen-sign"></i>
+                        </div>
+                        <h3>明確な料金</h3>
+                        <p>事前に明確な料金をお伝えし、追加費用は一切発生しません。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page-section">
+        <section class="services">
+            <div class="container">
+                <h2 class="section-title">サービス一覧</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>建設業許可</h3>
+                        <p>一般建設業許可・特定建設業許可の新規申請、更新、変更届など、建設業に関する許可手続きを完全サポート。</p>
+                        <ul style="text-align: left; margin-top: 1rem;">
+                            <li>新規許可申請</li>
+                            <li>許可更新手続き</li>
+                            <li>変更届・廃業届</li>
+                            <li>経営事項審査申請</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>会社設立</h3>
+                        <p>株式会社・合同会社の設立手続きから設立後の各種届出まで、起業をトータルサポート。</p>
+                        <ul style="text-align: left; margin-top: 1rem;">
+                            <li>定款作成・認証</li>
+                            <li>設立登記サポート</li>
+                            <li>各種許認可取得</li>
+                            <li>助成金申請サポート</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>相続・遺言</h3>
+                        <p>相続手続きから遺言書作成まで、ご家族の大切な財産を守るお手伝いをいたします。</p>
+                        <ul style="text-align: left; margin-top: 1rem;">
+                            <li>遺言書作成サポート</li>
+                            <li>相続手続き代行</li>
+                            <li>遺産分割協議書作成</li>
+                            <li>相続放棄手続き</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>車庫証明・名義変更</h3>
+                        <p>自動車の車庫証明取得から名義変更まで、面倒な手続きを代行いたします。</p>
+                        <ul style="text-align: left; margin-top: 1rem;">
+                            <li>車庫証明取得</li>
+                            <li>自動車名義変更</li>
+                            <li>廃車手続き</li>
+                            <li>ナンバープレート変更</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <h3>入管手続き</h3>
+                        <p>在留資格申請・変更、永住許可申請など、外国人の方の在留手続きをサポート。</p>
+                        <ul style="text-align: left; margin-top: 1rem;">
+                            <li>在留資格認定証明書</li>
+                            <li>在留資格変更・更新</li>
+                            <li>永住許可申請</li>
+                            <li>帰化許可申請</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>各種許認可</h3>
+                        <p>飲食店営業許可、古物商許可など、事業に必要な各種許認可取得をサポート。</p>
+                        <ul style="text-align: left; margin-top: 1rem;">
+                            <li>飲食店営業許可</li>
+                            <li>古物商許可</li>
+                            <li>産業廃棄物処理業許可</li>
+                            <li>旅行業登録</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page-section">
+        <section class="about">
+            <div class="container">
+                <h2 class="section-title">事務所案内</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div>
+                            <i class="fas fa-user-tie" style="font-size: 4rem; margin-bottom: 1rem; display: block;"></i>
+                            <p>代表行政書士<br>田中 太郎</p>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3 style="color: #1e3c72; margin-bottom: 1rem;">代表挨拶</h3>
+                        <p style="margin-bottom: 1.5rem;">
+                            田中行政書士事務所のホームページをご覧いただき、ありがとうございます。<br>
+                            当事務所は、お客様の「困った」を「安心」に変えることを使命として、日々業務に取り組んでおります。
+                        </p>
+                        <p style="margin-bottom: 1.5rem;">
+                            行政手続きは複雑で分かりにくいものが多く、お一人で対応するには時間も労力もかかります。
+                            私たちは豊富な経験と専門知識を活かし、お客様に代わって迅速かつ確実に手続きを進めてまいります。
+                        </p>
+                        <p style="margin-bottom: 2rem;">
+                            些細なことでもお気軽にご相談ください。お客様のお役に立てるよう、精一杯サポートさせていただきます。
+                        </p>
+                        
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                            <h4 style="color: #1e3c72; margin-bottom: 1rem;">事務所情報</h4>
+                            <div style="display: grid; gap: 0.5rem;">
+                                <p><strong>事務所名：</strong> 田中行政書士事務所</p>
+                                <p><strong>代表者：</strong> 行政書士 田中 太郎</p>
+                                <p><strong>登録番号：</strong> 第12345678号</p>
+                                <p><strong>所属：</strong> 東京都行政書士会</p>
+                                <p><strong>営業時間：</strong> 平日 9:00〜18:00（土日祝日は要相談）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1);">
+                    <h3 style="color: #1e3c72; margin-bottom: 2rem; text-align: center;">アクセス情報</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                        <div>
+                            <div style="margin-bottom: 1rem;">
+                                <i class="fas fa-map-marker-alt" style="color: #2a5298; margin-right: 0.5rem;"></i>
+                                <strong>所在地</strong>
+                            </div>
+                            <p style="margin-bottom: 1.5rem;">〒100-0001<br>東京都千代田区千代田1-1-1<br>千代田ビル5階</p>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <i class="fas fa-train" style="color: #2a5298; margin-right: 0.5rem;"></i>
+                                <strong>アクセス</strong>
+                            </div>
+                            <p style="margin-bottom: 1.5rem;">
+                                JR東京駅 徒歩5分<br>
+                                地下鉄大手町駅 徒歩3分<br>
+                                地下鉄日比谷線大手町駅 徒歩3分
+                            </p>
+                        </div>
+                        <div style="background: #f0f2f5; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666;">
+                            <div style="text-align: center;">
+                                <i class="fas fa-map" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <p>Google Map<br>（実際のサイトでは地図が表示されます）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Pricing Page -->
+    <div id="pricing" class="page-section">
+        <section class="pricing">
+            <div class="container">
+                <h2 class="section-title">料金表</h2>
+                <p style="text-align: center; margin-bottom: 3rem; color: #666;">
+                    明確で分かりやすい料金体系。事前にお見積もりをお渡しし、追加費用は一切発生いたしません。
+                </p>
+                
+                <h3 style="color: #1e3c72; margin-bottom: 2rem; text-align: center;">建設業許可関連</h3>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h4>一般建設業許可（新規）</h4>
+                        <div class="price">120,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 申請書類作成</li>
+                            <li>✓ 必要書類収集代行</li>
+                            <li>✓ 行政庁への申請代行</li>
+                            <li>✓ 許可取得まで完全サポート</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card featured">
+                        <h4>建設業許可（更新）</h4>
+                        <div class="price">60,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 更新申請書類作成</li>
+                            <li>✓ 決算変更届作成</li>
+                            <li>✓ 申請代行</li>
+                            <li>✓ 人気プラン</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>特定建設業許可（新規）</h4>
+                        <div class="price">150,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 申請書類作成</li>
+                            <li>✓ 財産要件確認</li>
+                            <li>✓ 技術者要件確認</li>
+                            <li>✓ 申請代行</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="color: #1e3c72; margin: 4rem 0 2rem; text-align: center;">会社設立関連</h3>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h4>株式会社設立</h4>
+                        <div class="price">80,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 定款作成・認証</li>
+                            <li>✓ 登記申請サポート</li>
+                            <li>✓ 各種届出書類作成</li>
+                            <li>✓ 設立後手続きサポート</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>合同会社設立</h4>
+                        <div class="price">60,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 定款作成</li>
+                            <li>✓ 登記申請サポート</li>
+                            <li>✓ 各種届出書類作成</li>
+                            <li>✓ 設立後手続きサポート</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>各種許認可取得</h4>
+                        <div class="price">50,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 許認可要件確認</li>
+                            <li>✓ 申請書類作成</li>
+                            <li>✓ 申請代行</li>
+                            <li>✓ 取得後のアフターフォロー</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="color: #1e3c72; margin: 4rem 0 2rem; text-align: center;">相続・遺言関連</h3>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h4>遺言書作成サポート</h4>
+                        <div class="price">50,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 遺言内容の相談</li>
+                            <li>✓ 公正証書遺言作成</li>
+                            <li>✓ 証人立会い</li>
+                            <li>✓ 遺言執行者就任可</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>相続手続き代行</h4>
+                        <div class="price">100,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 相続人調査</li>
+                            <li>✓ 相続財産調査</li>
+                            <li>✓ 遺産分割協議書作成</li>
+                            <li>✓ 各種名義変更手続き</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>相続放棄手続き</h4>
+                        <div class="price">40,000円〜</div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✓ 相続放棄申述書作成</li>
+                            <li>✓ 必要書類収集</li>
+                            <li>✓ 家庭裁判所への申立て</li>
+                            <li>✓ 照会書回答サポート</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-top: 3rem; text-align: center;">
+                    <h4 style="color: #1e3c72; margin-bottom: 1rem;">料金に関するご注意</h4>
+                    <ul style="list-style: none; padding: 0; display: inline-block; text-align: left;">
+                        <li style="margin-bottom: 0.5rem;">• 上記料金は基本料金です。案件の複雑さにより変動する場合があります</li>
+                        <li style="margin-bottom: 0.5rem;">• 実費（印紙代、証明書取得費用等）は別途必要です</li>
+                        <li style="margin-bottom: 0.5rem;">• 事前に詳細なお見積もりをお渡しいたします</li>
+                        <li style="margin-bottom: 0.5rem;">• 初回相談（30分）は無料です</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Testimonials Page -->
+    <div id="testimonials" class="page-section">
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">お客様の声</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>建設業許可の申請で依頼しました。複雑な手続きでしたが、田中先生が丁寧に説明してくださり、スムーズに許可を取得できました。本当にありがとうございました。</p>
+                        <div class="client-info">
+                            <div class="client-avatar">A</div>
+                            <div>
+                                <strong>A建設株式会社 代表取締役様</strong>
+                                <div style="color: #666; font-size: 0.9rem;">建設業許可取得</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p>会社設立から各種許認可まで、すべてお任せしました。創業時の忙しい時期に、面倒な手続きを代行していただき、事業に集中できました。</p>
+                        <div class="client-info">
+                            <div class="client-avatar">B</div>
+                            <div>
+                                <strong>株式会社○○商事 代表取締役様</strong>
+                                <div style="color: #666; font-size: 0.9rem;">会社設立・許認可取得</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p>父の相続手続きでお世話になりました。相続人が多く複雑でしたが、親身になって対応していただき、無事に手続きを完了できました。</p>
+                        <div class="client-info">
+                            <div class="client-avatar">C</div>
+                            <div>
+                                <strong>田中様</strong>
+                                <div style="color: #666; font-size: 0.9rem;">相続手続き</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p>飲食店の営業許可から古物商許可まで、複数の許可を同時に取得していただきました。料金も明確で、安心してお任せできました。</p>
+                        <div class="client-info">
+                            <div class="client-avatar">D</div>
+                            <div>
+                                <strong>株式会社○○フーズ 代表取締役様</strong>
+                                <div style="color: #666; font-size: 0.9rem;">各種許認可取得</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p>在留資格の変更手続きでお世話になりました。日本語が不安でしたが、分かりやすく説明していただき、無事に手続きが完了しました。</p>
+                        <div class="client-info">
+                            <div class="client-avatar">E</div>
+                            <div>
+                                <strong>王様</strong>
+                                <div style="color: #666; font-size: 0.9rem;">在留資格変更</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p>車庫証明や自動車の名義変更など、面倒な手続きを代行していただきました。迅速な対応で、予定通りに車を使用開始できました。</p>
+                        <div class="client-info">
+                            <div class="client-avatar">F</div>
+                            <div>
+                                <strong>佐藤様</strong>
+                                <div style="color: #666; font-size: 0.9rem;">車庫証明・名義変更</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-top: 3rem; text-align: center;">
+                    <h4 style="color: #1e3c72; margin-bottom: 1rem;">お客様満足度</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <div style="font-size: 2rem; font-weight: bold; color: #2a5298;">98%</div>
+                            <div>お客様満足度</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: bold; color: #2a5298;">1,200+</div>
+                            <div>対応実績</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: bold; color: #2a5298;">15年</div>
+                            <div>業務実績</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: bold; color: #2a5298;">95%</div>
+                            <div>許可取得成功率</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Page -->
+    <div id="blog" class="page-section">
+        <section class="blog">
+            <div class="container">
+                <h2 class="section-title">ブログ</h2>
+                
+                <!-- Blog Admin Panel (実際のサイトでは管理者のみ表示) -->
+                <div class="admin-panel" style="display: none;" id="blog-admin">
+                    <h3>ブログ記事管理</h3>
+                    <form class="admin-form" id="blog-form">
+                        <input type="hidden" id="edit-id" value="">
+                        <input type="text" id="blog-title" placeholder="記事タイトル" required>
+                        <textarea id="blog-content" placeholder="記事内容" rows="6" required></textarea>
+                        <input type="text" id="blog-author" placeholder="投稿者" value="田中行政書士">
+                        <div class="admin-actions">
+                            <button type="submit" class="btn btn-primary">記事を投稿</button>
+                            <button type="button" class="btn btn-danger" id="cancel-edit" style="display: none;" onclick="cancelEdit()">キャンセル</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Blog List -->
+                <div class="blog-list" id="blog-list">
+                    <!-- ブログ記事がここに動的に追加されます -->
+                </div>
+
+                <!-- Sample Blog Posts -->
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-building" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">2024年12月15日</div>
+                            <h3>建設業許可の更新時期について</h3>
+                            <p>建設業許可は5年ごとの更新が必要です。更新手続きは許可期間満了日の3ヶ月前から申請可能で、期間内に手続きを完了する必要があります...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-briefcase" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">2024年12月10日</div>
+                            <h3>2024年会社設立の流れとポイント</h3>
+                            <p>会社設立は複雑な手続きですが、適切な準備と手順で効率的に進められます。定款作成から登記申請まで、重要なポイントを解説します...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-heart" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">2024年12月05日</div>
+                            <h3>相続手続きで注意すべき期限について</h3>
+                            <p>相続には様々な期限が設けられています。相続放棄は3ヶ月以内、相続税申告は10ヶ月以内など、重要な期限を見逃さないようにしましょう...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-file-contract" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">2024年11月28日</div>
+                            <h3>飲食店開業に必要な許可・届出</h3>
+                            <p>飲食店を開業するには、営業許可をはじめ複数の許可・届出が必要です。スムーズな開業のために、必要な手続きを事前に確認しましょう...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-passport" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">2024年11月20日</div>
+                            <h3>在留資格「技能実習」から「技術・人文知識・国際業務」への変更</h3>
+                            <p>技能実習から他の在留資格への変更は可能ですが、要件を満たす必要があります。変更申請のポイントと注意事項について解説します...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-car" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">2024年11月15日</div>
+                            <h3>車庫証明申請の必要書類と注意点</h3>
+                            <p>車庫証明の申請には、自動車保管場所証明申請書や保管場所の所在図・配置図などが必要です。申請書類の作成ポイントをご紹介します...</p>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Admin Toggle Button (実際のサイトでは管理者のみ表示) -->
+                <button onclick="toggleAdmin()" class="btn btn-primary" style="margin-top: 2rem;">
+                    <i class="fas fa-cog"></i> 管理者モード
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page-section">
+        <section class="contact">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ</h2>
+                <p style="text-align: center; margin-bottom: 3rem; color: #666;">
+                    初回相談は無料です。お気軽にお問い合わせください。
+                </p>
+                
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 1.5rem; color: #1e3c72;">お問い合わせフォーム</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">お名前 *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">会社名・団体名</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">メールアドレス *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">電話番号</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">ご相談内容 *</label>
+                                <select id="service" name="service" required style="width: 100%; padding: 0.75rem; border: 2px solid #e1e8ed; border-radius: 8px; font-size: 1rem;">
+                                    <option value="">選択してください</option>
+                                    <option value="construction">建設業許可</option>
+                                    <option value="company">会社設立</option>
+                                    <option value="inheritance">相続・遺言</option>
+                                    <option value="vehicle">車庫証明・名義変更</option>
+                                    <option value="immigration">入管手続き</option>
+                                    <option value="license">各種許認可</option>
+                                    <option value="other">その他</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">詳細・ご質問 *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" required style="margin-right: 0.5rem;">
+                                    <a href="#" style="color: #2a5298;">プライバシーポリシー</a>に同意します
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                                送信する
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3 style="margin-bottom: 1.5rem; color: #1e3c72;">お問い合わせ先</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong>電話番号</strong>
+                                <p>03-1234-5678</p>
+                                <small style="color: #666;">受付時間：平日 9:00〜18:00</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong>メールアドレス</strong>
+                                <p>info@tanaka-gyosei.com</p>
+                                <small style="color: #666;">24時間受付（返信は営業時間内）</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <strong>所在地</strong>
+                                <p>〒100-0001<br>東京都千代田区千代田1-1-1<br>千代田ビル5階</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <strong>営業時間</strong>
+                                <p>平日 9:00〜18:00</p>
+                                <small style="color: #666;">土日祝日は要相談</small>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
+                            <h4 style="color: #1e3c72; margin-bottom: 1rem;">
+                                <i class="fas fa-gift" style="margin-right: 0.5rem;"></i>
+                                初回相談無料
+                            </h4>
+                            <p style="margin: 0; color: #666;">
+                                初回のご相談（30分）は無料です。<br>
+                                お気軽にお問い合わせください。<br>
+                                出張相談も承っております。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>田中行政書士事務所</h3>
+                    <p>お客様の「困った」を「安心」に変える、信頼と実績の行政書士事務所です。</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="tel:03-1234-5678" style="margin-right: 1rem;"><i class="fas fa-phone"></i></a>
+                        <a href="mailto:info@tanaka-gyosei.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サービス</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('services')">建設業許可</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('services')">会社設立</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('services')">相続・遺言</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('services')">車庫証明・名義変更</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('services')">入管手続き</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>お役立ち情報</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('blog')">ブログ</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('pricing')">料金表</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('testimonials')">お客様の声</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">よくある質問</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>お問い合わせ</h3>
+                    <p><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>03-1234-5678</p>
+                    <p><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>info@tanaka-gyosei.com</p>
+                    <p><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>東京都千代田区千代田1-1-1</p>
+                    <p><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>平日 9:00〜18:00</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 田中行政書士事務所. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        function showPage(pageId) {
+            // Hide all page sections
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Update active nav link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Blog Management Functions
+        let blogPosts = [];
+        let editingId = null;
+
+        function toggleAdmin() {
+            const adminPanel = document.getElementById('blog-admin');
+            const isVisible = adminPanel.style.display !== 'none';
+            adminPanel.style.display = isVisible ? 'none' : 'block';
+            
+            if (!isVisible) {
+                loadBlogPosts();
+            }
+        }
+
+        function loadBlogPosts() {
+            const blogList = document.getElementById('blog-list');
+            blogList.innerHTML = '';
+            
+            if (blogPosts.length === 0) {
+                blogList.innerHTML = '<div style="padding: 2rem; text-align: center; color: #666;">まだ記事が投稿されていません。</div>';
+                return;
+            }
+            
+            blogPosts.forEach((post, index) => {
+                const postElement = document.createElement('div');
+                postElement.className = 'blog-item';
+                postElement.innerHTML = `
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: #1e3c72;">${post.title}</h4>
+                        <p style="margin-bottom: 0.5rem; color: #666;">${post.content.substring(0, 100)}...</p>
+                        <small style="color: #999;">投稿者: ${post.author} | ${post.date}</small>
+                    </div>
+                    <div class="blog-actions">
+                        <button class="btn btn-primary btn-sm" onclick="editPost(${index})">編集</button>
+                        <button class="btn btn-danger btn-sm" onclick="deletePost(${index})">削除</button>
+                    </div>
+                `;
+                blogList.appendChild(postElement);
+            });
+        }
+
+        function editPost(index) {
+            const post = blogPosts[index];
+            editingId = index;
+            
+            document.getElementById('edit-id').value = index;
+            document.getElementById('blog-title').value = post.title;
+            document.getElementById('blog-content').value = post.content;
+            document.getElementById('blog-author').value = post.author;
+            document.getElementById('cancel-edit').style.display = 'inline-block';
+            
+            // Scroll to form
+            document.getElementById('blog-admin').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function deletePost(index) {
+            if (confirm('この記事を削除してもよろしいですか？')) {
+                blogPosts.splice(index, 1);
+                loadBlogPosts();
+            }
+        }
+
+        function cancelEdit() {
+            editingId = null;
+            document.getElementById('blog-form').reset();
+            document.getElementById('edit-id').value = '';
+            document.getElementById('cancel-edit').style.display = 'none';
+        }
+
+        // Form submission handlers
+        document.getElementById('blog-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('blog-title').value;
+            const content = document.getElementById('blog-content').value;
+            const author = document.getElementById('blog-author').value;
+            const date = new Date().toLocaleDateString('ja-JP');
+            
+            const post = { title, content, author, date };
+            
+            if (editingId !== null) {
+                blogPosts[editingId] = post;
+                editingId = null;
+                document.getElementById('cancel-edit').style.display = 'none';
+                alert('記事を更新しました！');
+            } else {
+                blogPosts.unshift(post);
+                alert('記事を投稿しました！');
+            }
+            
+            this.reset();
+            document.getElementById('blog-author').value = '田中行政書士';
+            loadBlogPosts();
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.service || !data.message) {
+                alert('必須項目をすべて入力してください。');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('お問い合わせありがとうございます。\n24時間以内にご連絡いたします。');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu functionality
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.getElementById('nav-menu').classList.remove('active');
+            }
+        });
+
+        // Add some sample blog posts for demonstration
+        blogPosts = [
+            {
+                title: "建設業許可申請のポイント",
+                content: "建設業許可を取得するためには、経営業務管理責任者や専任技術者の配置など、様々な要件を満たす必要があります。申請前の準備が重要です。",
+                author: "田中行政書士",
+                date: new Date().toLocaleDateString('ja-JP')
+            },
+            {
+                title: "会社設立の流れについて",
+                content: "株式会社を設立する際は、定款の作成・認証、資本金の払込み、設立登記などの手続きが必要です。適切な手順で進めることが大切です。",
+                author: "田中行政書士",
+                date: new Date(Date.now() - 86400000).toLocaleDateString('ja-JP')
+            }
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show home page by default
+            showPage('home');
+            
+            // Add fade-in animation
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            const loader = document.createElement('div');
+            loader.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #1e3c72;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 1.5rem;
+                z-index: 9999;
+                transition: opacity 0.5s;
+            `;
+            loader.innerHTML = '<div><i class="fas fa-spinner fa-spin"></i> 読み込み中...</div>';
+            document.body.appendChild(loader);
+            
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(loader);
+                }, 500);
+            }, 1000);
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', function() {
+            const hero = document.querySelector('.hero');
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            if (hero) {
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+        });
+
+        // Add hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.service-card, .pricing-card, .testimonial-card, .blog-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+
+        // Add typing animation to hero text
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Counter animation for statistics
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.ceil(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            updateCounter();
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Add animation classes
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.service-card, .feature-item, .pricing-card, .testimonial-card');
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Form validation enhancements
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validatePhone(phone) {
+            const re = /^[\d\-\s\+\(\)]+$/;
+            return re.test(phone);
+        }
+
+        // Enhanced form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validation
+            if (!name) {
+                alert('お名前を入力してください。');
+                document.getElementById('name').focus();
+                return;
+            }
+            
+            if (!email || !validateEmail(email)) {
+                alert('正しいメールアドレスを入力してください。');
+                document.getElementById('email').focus();
+                return;
+            }
+            
+            if (phone && !validatePhone(phone)) {
+                alert('正しい電話番号を入力してください。');
+                document.getElementById('phone').focus();
+                return;
+            }
+            
+            if (!message) {
+                alert('詳細・ご質問を入力してください。');
+                document.getElementById('message').focus();
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                alert('お問い合わせありがとうございます。\n24時間以内にご連絡いたします。');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Add print functionality
+        function printPage() {
+            window.print();
+        }
+
+        // Add search functionality (basic)
+        function searchContent(query) {
+            const content = document.body.innerText.toLowerCase();
+            return content.includes(query.toLowerCase());
+        }
+
+        // Accessibility improvements
+        document.addEventListener('keydown', function(e) {
+            // ESC key closes mobile menu
+            if (e.key === 'Escape') {
+                document.getElementById('nav-menu').classList.remove('active');
+            }
+            
+            // Enter and Space activate buttons
+            if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('btn')) {
+                e.preventDefault();
+                e.target.click();
+            }
+        });
+
+        // Focus management for accessibility
+        function manageFocus(targetElement) {
+            targetElement.focus();
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Add skip to content link for accessibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.createElement('a');
+            skipLink.href = '#main-content';
+            skipLink.textContent = 'メインコンテンツにスキップ';
+            skipLink.className = 'skip-link';
+            skipLink.style.cssText = `
+                position: absolute;
+                top: -40px;
+                left: 6px;
+                background: #000;
+                color: white;
+                padding: 8px;
+                text-decoration: none;
+                z-index: 100;
+                border-radius: 4px;
+            `;
+            
+            skipLink.addEventListener('focus', function() {
+                this.style.top = '6px';
+            });
+            
+            skipLink.addEventListener('blur', function() {
+                this.style.top = '-40px';
+            });
+            
+            document.body.insertBefore(skipLink, document.body.firstChild);
+            
+            // Add main content ID
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.id = 'main-content';
+                hero.setAttribute('tabindex', '-1');
+            }
+        });
+    </script>
+
+    <!-- Netlify CMS Config -->
+    <script>
+        // This would be in a separate admin/config.yml file in a real implementation
+        const netlifyCMSConfig = {
+            backend: {
+                name: 'git-gateway',
+                branch: 'main'
+            },
+            media_folder: 'images/uploads',
+            public_folder: '/images/uploads',
+            collections: [
+                {
+                    name: 'blog',
+                    label: 'ブログ',
+                    folder: '_posts',
+                    create: true,
+                    slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+                    fields: [
+                        { label: 'タイトル', name: 'title', widget: 'string' },
+                        { label: '投稿日', name: 'date', widget: 'datetime' },
+                        { label: '投稿者', name: 'author', widget: 'string', default: '田中行政書士' },
+                        { label: 'カテゴリー', name: 'category', widget: 'select', options: ['建設業許可', '会社設立', '相続・遺言', '入管手続き', 'その他'] },
+                        { label: '本文', name: 'body', widget: 'markdown' }
+                    ]
+                },
+                {
+                    name: 'pages',
+                    label: 'ページ',
+                    files: [
+                        {
+                            label: 'お客様の声',
+                            name: 'testimonials',
+                            file: '_data/testimonials.yml',
+                            fields: [
+                                {
+                                    label: 'お客様の声',
+                                    name: 'testimonials',
+                                    widget: 'list',
+                                    fields: [
+                                        { label: 'お名前', name: 'name', widget: 'string' },
+                                        { label: '会社名', name: 'company', widget: 'string' },
+                                        { label: 'サービス', name: 'service', widget: 'string' },
+                                        { label: 'コメント', name: 'comment', widget: 'text' }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+        
+        // In a real implementation, this would be loaded from admin/index.html
+        console.log('Netlify CMS設定:', netlifyCMSConfig);
+    </script>
+</body>
+</html>
