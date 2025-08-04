@@ -28,7 +28,7 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: linear-gradient(135deg, #1e7245, #2a9850);
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -77,13 +77,58 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f2f5" width="1200" height="600"/><path fill="%23e1e8ed" d="M0 400l50-16.7C100 367 200 333 300 316.7C400 300 500 300 600 316.7C700 333 800 367 900 383.3C1000 400 1100 400 1150 400L1200 400V600H0V400Z"/></svg>');
-            background-size: cover;
-            background-position: center;
+            position: relative;
             color: white;
             text-align: center;
             padding: 150px 0 100px;
             margin-top: 80px;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide:nth-child(1) {
+            background-image: linear-gradient(rgba(30, 114, 69, 0.7), rgba(42, 152, 80, 0.7)), url('hero1.jpg');
+        }
+
+        .hero-slide:nth-child(2) {
+            background-image: linear-gradient(rgba(30, 114, 69, 0.7), rgba(42, 152, 80, 0.7)), url('hero2.jpg');
+        }
+
+        .hero-slide:nth-child(3) {
+            background-image: linear-gradient(rgba(30, 114, 69, 0.7), rgba(42, 152, 80, 0.7)), url('hero3.jpg');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
@@ -124,7 +169,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #1e3c72;
+            color: #1e7245;
             position: relative;
         }
 
@@ -136,7 +181,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: #ffd700;
+            background: #2a9850;
             border-radius: 2px;
         }
 
@@ -164,14 +209,14 @@
 
         .service-icon {
             font-size: 3rem;
-            color: #2a5298;
+            color: #2a9850;
             margin-bottom: 1rem;
         }
 
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #1e3c72;
+            color: #1e7245;
         }
 
         /* Features */
@@ -191,10 +236,150 @@
             padding: 1.5rem;
         }
 
+        .feature-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background-size: cover;
+            background-position: center;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-image.speed {
+            background-image: url('speed.jpg');
+        }
+
+        .feature-image.reliable {
+            background-image: url('reliable.jpg');
+        }
+
+        .feature-image.support {
+            background-image: url('support.jpg');
+        }
+
+        .feature-image.price {
+            background-image: url('price.jpg');
+        }
+
         .feature-icon {
             font-size: 2.5rem;
-            color: #ffd700;
+            color: #2a9850;
             margin-bottom: 1rem;
+        }
+
+        /* Main Pricing Section */
+        .main-pricing {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 80px 0;
+        }
+
+        .main-pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .main-pricing-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .main-pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(42, 152, 80, 0.2);
+            border-color: #2a9850;
+        }
+
+        .main-pricing-card.featured {
+            background: linear-gradient(135deg, #1e7245, #2a9850);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .main-pricing-icon {
+            font-size: 4rem;
+            color: #2a9850;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-pricing-card.featured .main-pricing-icon {
+            color: white;
+        }
+
+        .main-pricing-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #1e7245;
+        }
+
+        .main-pricing-card.featured .main-pricing-title {
+            color: white;
+        }
+
+        .main-pricing-price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2a9850;
+            margin: 1.5rem 0;
+        }
+
+        .main-pricing-card.featured .main-pricing-price {
+            color: #ffd700;
+        }
+
+        .main-pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .main-pricing-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .main-pricing-card.featured .main-pricing-features li {
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+
+        .main-pricing-button {
+            background: #2a9850;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .main-pricing-button:hover {
+            background: #1e7245;
+            transform: translateY(-2px);
+        }
+
+        .main-pricing-card.featured .main-pricing-button {
+            background: white;
+            color: #1e7245;
+        }
+
+        .main-pricing-card.featured .main-pricing-button:hover {
+            background: #f8f9fa;
         }
 
         /* About */
@@ -207,7 +392,7 @@
         }
 
         .about-image {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: linear-gradient(135deg, #1e7245, #2a9850);
             height: 400px;
             border-radius: 15px;
             display: flex;
@@ -215,6 +400,17 @@
             justify-content: center;
             color: white;
             font-size: 1.2rem;
+            background-image: url('profile.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-image-placeholder {
+            background: linear-gradient(135deg, #1e7245, #2a9850);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
         }
 
         /* Pricing */
@@ -238,12 +434,12 @@
         }
 
         .pricing-card:hover {
-            border-color: #2a5298;
-            box-shadow: 0 10px 30px rgba(42, 82, 152, 0.1);
+            border-color: #2a9850;
+            box-shadow: 0 10px 30px rgba(42, 152, 80, 0.1);
         }
 
         .pricing-card.featured {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: linear-gradient(135deg, #1e7245, #2a9850);
             color: white;
             transform: scale(1.05);
         }
@@ -291,7 +487,7 @@
         .client-avatar {
             width: 50px;
             height: 50px;
-            background: #2a5298;
+            background: #2a9850;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -326,7 +522,7 @@
 
         .blog-image {
             height: 200px;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: linear-gradient(135deg, #1e7245, #2a9850);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -417,7 +613,7 @@
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: #2a5298;
+            background: #2a9850;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -427,7 +623,7 @@
 
         /* Footer */
         footer {
-            background: #1e3c72;
+            background: #1e7245;
             color: white;
             padding: 3rem 0 1rem;
         }
@@ -457,8 +653,19 @@
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #2a5298;
+            border-top: 1px solid #2a9850;
             color: #ccc;
+        }
+
+        .footer-map {
+            margin-top: 2rem;
+        }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
         }
 
         /* Responsive */
@@ -557,12 +764,12 @@
         }
 
         .btn-primary {
-            background: #2a5298;
+            background: #2a9850;
             color: white;
         }
 
         .btn-primary:hover {
-            background: #1e3c72;
+            background: #1e7245;
         }
 
         .btn-danger {
@@ -630,10 +837,17 @@
     <!-- Home Page -->
     <div id="home" class="page-section active">
         <section class="hero">
+            <div class="hero-slideshow">
+                <div class="hero-slide active"></div>
+                <div class="hero-slide"></div>
+                <div class="hero-slide"></div>
+            </div>
             <div class="container">
-                <h1>信頼と実績の行政書士事務所</h1>
-                <p>建設業許可・会社設立・相続手続きなど、あらゆる行政手続きをプロフェッショナルがサポート</p>
-                <a href="#" onclick="showPage('contact')" class="cta-button">無料相談のご予約</a>
+                <div class="hero-content">
+                    <h1>信頼と実績の行政書士事務所</h1>
+                    <p>建設業許可・会社設立・相続手続きなど、あらゆる行政手続きをプロフェッショナルがサポート</p>
+                    <a href="#" onclick="showPage('contact')" class="cta-button">無料相談のご予約</a>
+                </div>
             </div>
         </section>
 
@@ -642,28 +856,92 @@
                 <h2 class="section-title">選ばれる理由</h2>
                 <div class="features-grid">
                     <div class="feature-item">
-                        <div class="feature-icon">
+                        <div class="feature-image speed">
                             <i class="fas fa-clock"></i>
                         </div>
                         <h3>迅速対応</h3>
                         <p>お急ぎの案件にも柔軟に対応。最短当日での書類作成も可能です。</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">
+                        <div class="feature-image reliable">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h3>確実な手続き</h3>
                         <p>豊富な経験と専門知識で、ミスのない確実な手続きを保証します。</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">
+                        <div class="feature-image support">
                             <i class="fas fa-handshake"></i>
                         </div>
                         <h3>丁寧なサポート</h3>
                         <p>お客様の立場に立った親身なサポートを心がけています。</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">
+                        <div class="feature-image price">
+                            <i class="fas fa-yen-sign"></i>
+                        </div>
+                        <h3>明確な料金</h3>
+                        <p>事前に明確な料金をお伝えし、追加費用は一切発生しません。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-pricing">
+            <div class="container">
+                <h2 class="section-title">主要サービス料金</h2>
+                <p style="text-align: center; margin-bottom: 3rem; color: #666; font-size: 1.2rem;">
+                    明確で分かりやすい料金体系で、安心してご依頼いただけます
+                </p>
+                <div class="main-pricing-grid">
+                    <div class="main-pricing-card">
+                        <div class="main-pricing-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="main-pricing-title">建設業許可</h3>
+                        <div class="main-pricing-price">120,000円〜</div>
+                        <ul class="main-pricing-features">
+                            <li>✓ 新規許可申請</li>
+                            <li>✓ 更新手続き</li>
+                            <li>✓ 変更届・廃業届</li>
+                            <li>✓ 完全サポート</li>
+                        </ul>
+                        <a href="#" onclick="showPage('contact')" class="main-pricing-button">詳細を見る</a>
+                    </div>
+                    
+                    <div class="main-pricing-card featured">
+                        <div class="main-pricing-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="main-pricing-title">会社設立</h3>
+                        <div class="main-pricing-price">80,000円〜</div>
+                        <ul class="main-pricing-features">
+                            <li>✓ 定款作成・認証</li>
+                            <li>✓ 登記申請サポート</li>
+                            <li>✓ 各種許認可取得</li>
+                            <li>✓ 人気プラン</li>
+                        </ul>
+                        <a href="#" onclick="showPage('contact')" class="main-pricing-button">詳細を見る</a>
+                    </div>
+                    
+                    <div class="main-pricing-card">
+                        <div class="main-pricing-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="main-pricing-title">相続・遺言</h3>
+                        <div class="main-pricing-price">50,000円〜</div>
+                        <ul class="main-pricing-features">
+                            <li>✓ 遺言書作成サポート</li>
+                            <li>✓ 相続手続き代行</li>
+                            <li>✓ 遺産分割協議書</li>
+                            <li>✓ 安心サポート</li>
+                        </ul>
+                        <a href="#" onclick="showPage('contact')" class="main-pricing-button">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
                             <i class="fas fa-yen-sign"></i>
                         </div>
                         <h3>明確な料金</h3>
@@ -770,7 +1048,7 @@
                 <h2 class="section-title">事務所案内</h2>
                 <div class="about-content">
                     <div class="about-image">
-                        <div>
+                        <div class="about-image-placeholder">
                             <i class="fas fa-user-tie" style="font-size: 4rem; margin-bottom: 1rem; display: block;"></i>
                             <p>代表行政書士<br>田中 太郎</p>
                         </div>
@@ -790,7 +1068,7 @@
                         </p>
                         
                         <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
-                            <h4 style="color: #1e3c72; margin-bottom: 1rem;">事務所情報</h4>
+                            <h4 style="color: #1e7245; margin-bottom: 1rem;">事務所情報</h4>
                             <div style="display: grid; gap: 0.5rem;">
                                 <p><strong>事務所名：</strong> 田中行政書士事務所</p>
                                 <p><strong>代表者：</strong> 行政書士 田中 太郎</p>
@@ -803,17 +1081,17 @@
                 </div>
                 
                 <div style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1);">
-                    <h3 style="color: #1e3c72; margin-bottom: 2rem; text-align: center;">アクセス情報</h3>
+                    <h3 style="color: #1e7245; margin-bottom: 2rem; text-align: center;">アクセス情報</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
                         <div>
                             <div style="margin-bottom: 1rem;">
-                                <i class="fas fa-map-marker-alt" style="color: #2a5298; margin-right: 0.5rem;"></i>
+                                <i class="fas fa-map-marker-alt" style="color: #2a9850; margin-right: 0.5rem;"></i>
                                 <strong>所在地</strong>
                             </div>
                             <p style="margin-bottom: 1.5rem;">〒100-0001<br>東京都千代田区千代田1-1-1<br>千代田ビル5階</p>
                             
                             <div style="margin-bottom: 1rem;">
-                                <i class="fas fa-train" style="color: #2a5298; margin-right: 0.5rem;"></i>
+                                <i class="fas fa-train" style="color: #2a9850; margin-right: 0.5rem;"></i>
                                 <strong>アクセス</strong>
                             </div>
                             <p style="margin-bottom: 1.5rem;">
@@ -1032,22 +1310,22 @@
                 </div>
                 
                 <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-top: 3rem; text-align: center;">
-                    <h4 style="color: #1e3c72; margin-bottom: 1rem;">お客様満足度</h4>
+                    <h4 style="color: #1e7245; margin-bottom: 1rem;">お客様満足度</h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
                         <div>
-                            <div style="font-size: 2rem; font-weight: bold; color: #2a5298;">98%</div>
+                            <div style="font-size: 2rem; font-weight: bold; color: #2a9850;">98%</div>
                             <div>お客様満足度</div>
                         </div>
                         <div>
-                            <div style="font-size: 2rem; font-weight: bold; color: #2a5298;">1,200+</div>
+                            <div style="font-size: 2rem; font-weight: bold; color: #2a9850;">1,200+</div>
                             <div>対応実績</div>
                         </div>
                         <div>
-                            <div style="font-size: 2rem; font-weight: bold; color: #2a5298;">15年</div>
+                            <div style="font-size: 2rem; font-weight: bold; color: #2a9850;">15年</div>
                             <div>業務実績</div>
                         </div>
                         <div>
-                            <div style="font-size: 2rem; font-weight: bold; color: #2a5298;">95%</div>
+                            <div style="font-size: 2rem; font-weight: bold; color: #2a9850;">95%</div>
                             <div>許可取得成功率</div>
                         </div>
                     </div>
@@ -1272,7 +1550,7 @@
                         </div>
                         
                         <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
-                            <h4 style="color: #1e3c72; margin-bottom: 1rem;">
+                            <h4 style="color: #1e7245; margin-bottom: 1rem;">
                                 <i class="fas fa-gift" style="margin-right: 0.5rem;"></i>
                                 初回相談無料
                             </h4>
@@ -1331,6 +1609,15 @@
                 </div>
             </div>
             
+            <div class="footer-map">
+                <h3 style="color: #ffd700; margin-bottom: 1rem; text-align: center;">アクセスマップ</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280290717437!2d139.76493321525444!3d35.681236580197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2024 田中行政書士事務所. All rights reserved.</p>
             </div>
@@ -1338,6 +1625,18 @@
     </footer>
 
     <script>
+        // Hero Slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        // Auto-play slideshow every 5 seconds
+        setInterval(nextSlide, 5000);
         // Navigation functionality
         function showPage(pageId) {
             // Hide all page sections
