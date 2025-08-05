@@ -18,12 +18,14 @@
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            overflow-x: hidden;
         }
 
         /* Header */
@@ -246,7 +248,7 @@
             margin: 0 auto 1rem;
             background-size: cover;
             background-position: center;
-            background-color: #f0f0f0;
+            background-color: #2a9850;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -254,22 +256,48 @@
 
         .feature-image.speed {
             background-image: url('speed.jpg.png');
+            background-color: #2a9850;
         }
 
         .feature-image.reliable {
             background-image: url('reliable.jpg.png');
+            background-color: #2a9850;
         }
 
         .feature-image.support {
             background-image: url('support.jpg.png');
+            background-color: #2a9850;
         }
 
         .feature-image.price {
             background-image: url('price.jpg.png');
+            background-color: #2a9850;
         }
 
         .feature-icon {
-            display: none;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature-item h3 {
+            margin-top: 1rem;
         }
 
         /* Main Pricing Section */
@@ -717,6 +745,7 @@
             display: none;
             min-height: calc(100vh - 160px);
             padding-top: 100px;
+            overflow-x: hidden;
         }
 
         .page-section.active {
@@ -858,28 +887,28 @@
                 <div class="features-grid">
                     <div class="feature-item">
                         <div class="feature-image speed">
-                            <i class="fas fa-clock"></i>
+                            <i class="fas fa-clock feature-icon"></i>
                         </div>
                         <h3>迅速対応</h3>
                         <p>お急ぎの案件にも柔軟に対応。最短当日での書類作成も可能です。</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-image reliable">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-shield-alt feature-icon"></i>
                         </div>
                         <h3>確実な手続き</h3>
                         <p>豊富な経験と専門知識で、ミスのない確実な手続きを保証します。</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-image support">
-                            <i class="fas fa-handshake"></i>
+                            <i class="fas fa-handshake feature-icon"></i>
                         </div>
                         <h3>丁寧なサポート</h3>
                         <p>お客様の立場に立った親身なサポートを心がけています。</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-image price">
-                            <i class="fas fa-yen-sign"></i>
+                            <i class="fas fa-yen-sign feature-icon"></i>
                         </div>
                         <h3>明確な料金</h3>
                         <p>事前に明確な料金をお伝えし、追加費用は一切発生しません。</p>
